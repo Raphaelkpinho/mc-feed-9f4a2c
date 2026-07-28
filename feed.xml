@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Morning Call</title>
+    <link>https://raphaelkpinho.github.io/mc-feed-9f4a2c</link>
+    <language>pt-br</language>
+    <description>Briefing executivo diário de Raphael Pinho, Co-CEO da Spark. Agenda, tarefas, o que trava decisão na caixa de entrada, o radar de mercado em cinco frentes e a pílula de conhecimento do dia. Seis minutos, toda manhã, de segunda a sexta.</description>
+    <itunes:summary>Briefing executivo diário de Raphael Pinho, Co-CEO da Spark. Agenda, tarefas, o que trava decisão na caixa de entrada, o radar de mercado em cinco frentes e a pílula de conhecimento do dia. Seis minutos, toda manhã, de segunda a sexta.</itunes:summary>
+    <itunes:author>Raphael Pinho</itunes:author>
+    <itunes:owner>
+      <itunes:name>Raphael Pinho</itunes:name>
+      <itunes:email>raphael.pinho@spark.com.br</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://d2ol7oe51mr4n9.cloudfront.net/user_3EaHUxaZ6zL3JHPvIIHYnvBxowx/d5c02bba-d690-4731-94c4-b747a9eb5127.jpg"/>
+    <itunes:category text="Business">
+      <itunes:category text="Management"/>
+    </itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <lastBuildDate>Tue, 28 Jul 2026 19:09:16 -0300</lastBuildDate>
+    <generator>morning-call</generator>
+    <item>
+      <title>Morning Call — terça, 28 de julho de 2026</title>
+      <description>Agenda do dia, tarefas em foco, o que trava decisao na caixa de entrada, radar de mercado em cinco frentes e a pilula de gestao de terca-feira: financas.</description>
+      <itunes:summary>Agenda do dia, tarefas em foco, o que trava decisao na caixa de entrada, radar de mercado em cinco frentes e a pilula de gestao de terca-feira: financas.</itunes:summary>
+      <itunes:author>Raphael Pinho</itunes:author>
+      <pubDate>Tue, 28 Jul 2026 06:30:00 -0300</pubDate>
+      <guid isPermaLink="false">morning-call-2026-07-28</guid>
+      <enclosure url="https://d2ol7oe51mr4n9.cloudfront.net/user_3EaHUxaZ6zL3JHPvIIHYnvBxowx/e730f8f1-88f4-4bc7-82b5-7a754cca8bcc.mp3" length="5558901" type="audio/mpeg"/>
+      <itunes:duration>00:05:47</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+  </channel>
+</rss>
