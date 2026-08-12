@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravia — Brand Book</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --vortex:#0B1020;       /* fundo gravitacional / void */
+  --orbita:#F5F2EB;       /* luz / espaço / bone */
+  --faisca:#FF5A1F;       /* energia Spark — ponte visual */
+  --sinal:#5AA2FF;        /* dado / inteligência / decisão */
+  --massa:#8A8F9C;        /* neutro estrutural */
+  --void2:#141A2E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--vortex);background:var(--orbita);line-height:1.6;-webkit-font-smoothing:antialiased}
+.mono{font-family:'Space Mono',monospace}
+.display{font-family:'Space Grotesk',sans-serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,242,235,.12)}
+nav .wrap{max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+nav .brand{font-family:'Space Grotesk';font-weight:700;letter-spacing:.22em;color:var(--orbita);font-size:15px}
+nav .brand small{color:var(--massa);font-weight:400;letter-spacing:.05em;font-size:11px;margin-left:8px}
+nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--massa);text-decoration:none;font-size:12.5px;letter-spacing:.04em;transition:color .2s}
+nav a:hover{color:var(--faisca)}
+
+section{max-width:1180px;margin:0 auto;padding:90px 32px;border-bottom:1px solid rgba(11,16,32,.08)}
+.dark{background:var(--vortex);color:var(--orbita);max-width:none;border:none}
+.dark .inner{max-width:1180px;margin:0 auto}
+.eyebrow{font-family:'Space Mono';font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--faisca);margin-bottom:18px}
+.dark .eyebrow{color:var(--faisca)}
+h1{font-family:'Space Grotesk';font-weight:700;font-size:clamp(38px,7vw,82px);line-height:1.02;letter-spacing:-.02em}
+h2{font-family:'Space Grotesk';font-weight:600;font-size:clamp(26px,4vw,40px);line-height:1.08;letter-spacing:-.01em;margin-bottom:22px}
+h3{font-family:'Space Grotesk';font-weight:600;font-size:19px;margin-bottom:8px}
+p.lead{font-size:clamp(17px,2vw,21px);max-width:620px;color:#3a4258}
+.dark p.lead{color:#c7ccda}
+.muted{color:var(--massa)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:780px){.grid2,.grid3{grid-template-columns:1fr}section{padding:64px 22px}}
+
+/* COVER */
+.cover{background:var(--vortex);color:var(--orbita);min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;max-width:none;border:none}
+.cover .inner{max-width:1180px;margin:0 auto;padding:0 32px;width:100%;position:relative;z-index:2}
+.cover h1{font-size:clamp(64px,16vw,200px);letter-spacing:-.04em}
+.cover .tagline{font-family:'Space Mono';letter-spacing:.18em;color:var(--massa);margin-top:18px;font-size:clamp(12px,2vw,15px)}
+.cover .endorse{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--orbita)}
+.cover .endorse .by{font-family:'Space Mono';font-size:12px;letter-spacing:.2em;color:var(--massa)}
+.cover .endorse .spark{font-family:'Space Grotesk';font-weight:700;font-size:20px;letter-spacing:.04em}
+.cover .spark b{color:var(--faisca)}
+.starfield{position:absolute;inset:0;z-index:1;opacity:.9}
+
+/* LOGO BLOCKS */
+.logobox{background:var(--orbita);border:1px solid rgba(11,16,32,.12);border-radius:14px;padding:38px;display:flex;align-items:center;justify-content:center;min-height:180px}
+.logobox.dark-bg{background:var(--vortex);border-color:rgba(245,242,235,.14)}
+.wordmark{font-family:'Space Grotesk';font-weight:700;letter-spacing:.06em;font-size:42px;color:var(--vortex)}
+.dark-bg .wordmark{color:var(--orbita)}
+.lockup{display:flex;align-items:center;gap:16px}
+.endorse-lockup{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.endorse-lockup .by{font-family:'Space Mono';font-size:11px;letter-spacing:.18em;color:var(--massa)}
+.endorse-lockup .by b{color:var(--vortex)}
+.dark-bg .endorse-lockup .by b{color:var(--orbita)}
+.caption{font-family:'Space Mono';font-size:11px;letter-spacing:.06em;color:var(--massa);margin-top:12px;text-align:center}
+
+/* PALETTE */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(11,16,32,.1)}
+@media(max-width:780px){.swatches{grid-template-columns:repeat(2,1fr)}}
+.swatch{padding:26px 18px;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end}
+.swatch .nm{font-family:'Space Grotesk';font-weight:600;font-size:16px}
+.swatch .hex{font-family:'Space Mono';font-size:12px;opacity:.85;margin-top:4px}
+.swatch .role{font-size:11.5px;margin-top:8px;opacity:.75;line-height:1.4}
+
+/* TYPE */
+.typespec{border:1px solid rgba(11,16,32,.1);border-radius:12px;padding:26px;margin-bottom:18px}
+.typespec .label{font-family:'Space Mono';font-size:11px;letter-spacing:.2em;color:var(--faisca);text-transform:uppercase}
+.bigtype{font-family:'Space Grotesk';font-weight:700;font-size:46px;line-height:1.05;margin:10px 0;letter-spacing:-.01em}
+
+/* ARCH */
+.archgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:780px){.archgrid{grid-template-columns:1fr}}
+.archcard{border:1px solid rgba(245,242,235,.16);border-radius:12px;padding:22px;background:var(--void2)}
+.archcard .nm{font-family:'Space Grotesk';font-weight:600;font-size:17px;color:var(--orbita)}
+.archcard .nm b{color:var(--faisca);font-weight:700}
+.archcard p{font-size:13.5px;color:#aab1c2;margin-top:6px}
+
+/* APPS */
+.appgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:780px){.appgrid{grid-template-columns:1fr}}
+.app{border:1px solid rgba(11,16,32,.12);border-radius:14px;overflow:hidden;background:#fff}
+.app .head{font-family:'Space Mono';font-size:11px;letter-spacing:.14em;color:var(--massa);padding:12px 16px;border-bottom:1px solid rgba(11,16,32,.08);text-transform:uppercase}
+.app .body{padding:24px}
+.icon-tile{width:96px;height:96px;border-radius:22px;background:var(--vortex);display:flex;align-items:center;justify-content:center}
+.splash{background:var(--vortex);border-radius:10px;min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.splash .btn{font-family:'Inter';font-weight:600;font-size:13px;color:var(--vortex);background:var(--orbita);padding:10px 26px;border-radius:8px}
+.dash{border-radius:10px;overflow:hidden;border:1px solid rgba(11,16,32,.1)}
+.dash .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--vortex);color:var(--orbita)}
+.dash .bar .tabs{display:flex;gap:18px;font-size:12px;color:var(--massa)}
+.dash .bar .tabs .on{color:var(--faisca)}
+.dash .stage{padding:22px 16px;background:#fff;display:flex;gap:14px}
+.kpi{flex:1;border:1px solid rgba(11,16,32,.1);border-radius:8px;padding:14px}
+.kpi .n{font-family:'Space Grotesk';font-weight:700;font-size:24px}
+.kpi .l{font-size:11px;color:var(--massa);margin-top:2px}
+.pitch{background:var(--vortex);color:var(--orbita);border-radius:10px;padding:40px 30px;min-height:230px;display:flex;flex-direction:column;justify-content:center}
+.pitch h4{font-family:'Space Grotesk';font-weight:700;font-size:30px;line-height:1.08;letter-spacing:-.01em}
+.pitch .by{font-family:'Space Mono';font-size:12px;letter-spacing:.16em;color:var(--massa);margin-top:16px}
+.sig{font-size:13px}
+.sig .nm{font-family:'Space Grotesk';font-weight:600;font-size:16px}
+.sig .rule{height:2px;width:42px;background:var(--faisca);margin:8px 0}
+
+/* RULES */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:780px){.rules{grid-template-columns:1fr}}
+.rulebox{border-radius:12px;padding:24px}
+.do{background:#eef6ef;border:1px solid #cfe6d2}
+.dont{background:#faecea;border:1px solid #f0cfc9}
+.rulebox h4{font-family:'Space Grotesk';font-weight:600;margin-bottom:10px;font-size:15px}
+.rulebox li{font-size:13.5px;margin:6px 0;list-style:none;padding-left:18px;position:relative}
+.do li:before{content:"+";position:absolute;left:0;color:#2f9e44;font-weight:700}
+.dont li:before{content:"\00d7";position:absolute;left:0;color:#e03131;font-weight:700}
+
+footer{background:var(--vortex);color:var(--massa);text-align:center;padding:40px 20px;font-family:'Space Mono';font-size:12px;letter-spacing:.08em}
+footer b{color:var(--faisca)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">GRAVIA <small>by Spark</small></div>
+    <ul>
+      <li><a href="#idea">A Ideia</a></li>
+      <li><a href="#spark">Gravia × Spark</a></li>
+      <li><a href="#logo">Logo</a></li>
+      <li><a href="#cor">Cor</a></li>
+      <li><a href="#tipo">Tipografia</a></li>
+      <li><a href="#arq">Arquitetura</a></li>
+      <li><a href="#apps">Aplicações</a></li>
+      <li><a href="#regras">Regras</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- COVER -->
+<header class="cover">
+  <svg class="starfield" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 700">
+    <g fill="#F5F2EB" opacity="0.5">
+      <circle cx="120" cy="90" r="1.2"/><circle cx="300" cy="160" r="1"/><circle cx="520" cy="60" r="1.4"/>
+      <circle cx="760" cy="120" r="1"/><circle cx="980" cy="80" r="1.3"/><circle cx="1080" cy="220" r="1"/>
+      <circle cx="200" cy="320" r="1"/><circle cx="60" cy="480" r="1.2"/><circle cx="900" cy="420" r="1"/>
+      <circle cx="1120" cy="540" r="1.3"/><circle cx="420" cy="600" r="1"/><circle cx="700" cy="640" r="1.1"/>
+      <circle cx="640" cy="300" r="1"/><circle cx="1000" cy="600" r="1"/><circle cx="380" cy="420" r="1"/>
+    </g>
+    <ellipse cx="600" cy="350" rx="430" ry="150" fill="none" stroke="#5AA2FF" stroke-width="1" opacity="0.25"/>
+    <ellipse cx="600" cy="350" rx="300" ry="100" fill="none" stroke="#8A8F9C" stroke-width="1" opacity="0.2"/>
+    <circle cx="190" cy="245" r="5" fill="#FF5A1F"/>
+  </svg>
+  <div class="inner">
+    <div class="eyebrow">Brand Book · v1</div>
+    <h1>GRAVIA</h1>
+    <div class="tagline">A plataforma de decisão da era dos creators · Da faísca à gravidade</div>
+    <div class="endorse">
+      <span class="by">uma plataforma</span>
+      <span class="spark">Spar<b>k</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- A IDEIA -->
+<section id="idea">
+  <div class="eyebrow">A Ideia</div>
+  <h2>Não é a interface. É o campo gravitacional.</h2>
+  <div class="grid2">
+    <div>
+      <p class="lead">A Gravia é o núcleo proprietário que organiza dados, agentes e decisão. O dado 1st party — cachê, comportamento e confiabilidade de creators — é a <strong>massa</strong> que puxa marcas, criadores e operação para um único centro.</p>
+      <p class="lead" style="margin-top:16px">Concorrentes agregam ferramentas dos outros num painel. A Gravia tem gravidade própria: tudo orbita o ativo que só a Spark possui.</p>
+    </div>
+    <div>
+      <h3>O que a Gravia NÃO é</h3>
+      <p class="muted" style="font-size:15px">Não é um dashboard. Não é um agregador de Sprout, WGSN e Stilingue. Não é um software de relatório.</p>
+      <h3 style="margin-top:24px">O que a Gravia É</h3>
+      <p class="muted" style="font-size:15px">O sistema operacional de decisão da Spark — datalake + agentes componíveis + inteligência — que serve clientes, operação e creators, e existe para <strong>decidir</strong>, não só operar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GRAVIA x SPARK -->
+<section id="spark" class="dark">
+  <div class="inner">
+    <div class="eyebrow">Gravia × Spark · a física da marca</div>
+    <h2 style="max-width:760px">A Spark acende.<br>A Gravia sustenta.</h2>
+    <div class="grid2" style="margin-top:30px">
+      <div>
+        <h3 style="color:var(--faisca)">Spark = faísca</h3>
+        <p class="lead">Ignição. Energia. A centelha criativa e cultural. O ato de criar relevância com creators.</p>
+      </div>
+      <div>
+        <h3 style="color:var(--sinal)">Gravia = gravidade</h3>
+        <p class="lead">A massa que organiza, retém e decide. O campo que transforma a faísca em órbita estável — e a órbita em decisão.</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:34px;max-width:720px;color:#e7eaf2">
+      Uma faísca cria energia; a gravidade dá a ela um sistema que não se desfaz. Creators orbitam marcas — e a Gravia é o campo que mantém essa órbita viva. <strong style="color:var(--faisca)">Da faísca à gravidade.</strong>
+    </p>
+    <p class="mono" style="margin-top:28px;font-size:12px;letter-spacing:.1em;color:var(--massa)">ARQUITETURA DE MARCA · SPARK (casa, relacionamento, confiança) endossa GRAVIA (tecnologia, dado, decisão)</p>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section id="logo">
+  <div class="eyebrow">Logo & Símbolo</div>
+  <h2>O símbolo é a própria tese: órbita, núcleo e faísca.</h2>
+  <p class="lead" style="margin-bottom:34px">O monograma é um “G” formado por uma órbita aberta. No centro, o núcleo (a massa de dados). Na órbita, a faísca — o ponto de energia que a Spark traz. Gravidade + Spark, num único sinal.</p>
+
+  <div class="grid2">
+    <div>
+      <div class="logobox">
+        <div class="lockup">
+          <!-- monogram light bg -->
+          <svg width="84" height="84" viewBox="0 0 100 100" aria-label="Gravia monogram">
+            <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+            <line x1="66" y1="50" x2="84" y2="50" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="8" fill="#0B1020"/>
+            <circle cx="50" cy="16" r="6" fill="#FF5A1F"/>
+          </svg>
+          <span class="wordmark">GRAVIA</span>
+        </div>
+      </div>
+      <div class="caption">PRINCIPAL · HORIZONTAL — fundo claro</div>
+    </div>
+    <div>
+      <div class="logobox dark-bg">
+        <div class="lockup">
+          <svg width="84" height="84" viewBox="0 0 100 100" aria-label="Gravia monogram dark">
+            <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#F5F2EB" stroke-width="7" stroke-linecap="round"/>
+            <line x1="66" y1="50" x2="84" y2="50" stroke="#F5F2EB" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="8" fill="#F5F2EB"/>
+            <circle cx="50" cy="16" r="6" fill="#FF5A1F"/>
+          </svg>
+          <span class="wordmark">GRAVIA</span>
+        </div>
+      </div>
+      <div class="caption">PRINCIPAL · HORIZONTAL — fundo Vórtex</div>
+    </div>
+  </div>
+
+  <div class="grid3" style="margin-top:24px">
+    <div>
+      <div class="logobox" style="min-height:150px">
+        <svg width="70" height="70" viewBox="0 0 100 100">
+          <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+          <line x1="66" y1="50" x2="84" y2="50" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="8" fill="#0B1020"/>
+          <circle cx="50" cy="16" r="6" fill="#FF5A1F"/>
+        </svg>
+      </div>
+      <div class="caption">MONOGRAMA · ícone</div>
+    </div>
+    <div>
+      <div class="logobox" style="min-height:150px;flex-direction:column;gap:10px">
+        <svg width="48" height="48" viewBox="0 0 100 100">
+          <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+          <line x1="66" y1="50" x2="84" y2="50" stroke="#0B1020" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="8" fill="#0B1020"/>
+          <circle cx="50" cy="16" r="6" fill="#FF5A1F"/>
+        </svg>
+        <span class="wordmark" style="font-size:26px">GRAVIA</span>
+      </div>
+      <div class="caption">EMPILHADA</div>
+    </div>
+    <div>
+      <div class="logobox" style="min-height:150px">
+        <div class="endorse-lockup">
+          <span class="wordmark" style="font-size:30px">GRAVIA</span>
+          <span class="by">by <b>Spark</b></span>
+        </div>
+      </div>
+      <div class="caption">ENDOSSO · lockup com a marca-mãe</div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:13px;margin-top:18px;font-family:'Space Mono'">Nota: a palavra “Spark” acima é placeholder tipográfico — substituir pelo logotipo oficial da Spark.</p>
+</section>
+
+<!-- COR -->
+<section id="cor">
+  <div class="eyebrow">Cor</div>
+  <h2>Um campo escuro, um ponto de energia.</h2>
+  <p class="lead" style="margin-bottom:30px">A Gravia vive no Vórtex (o campo gravitacional). A Faísca — herdada da Spark — é o único ponto quente: energia em órbita. O Sinal traz o frio do dado e da decisão.</p>
+  <div class="swatches">
+    <div class="swatch" style="background:#0B1020;color:#F5F2EB">
+      <div class="nm">Vórtex</div><div class="hex">#0B1020</div>
+      <div class="role">Base. O campo gravitacional. Fundo institucional.</div>
+    </div>
+    <div class="swatch" style="background:#F5F2EB;color:#0B1020">
+      <div class="nm">Órbita</div><div class="hex">#F5F2EB</div>
+      <div class="role">Luz e espaço. Fundos claros, respiro.</div>
+    </div>
+    <div class="swatch" style="background:#FF5A1F;color:#0B1020">
+      <div class="nm">Faísca</div><div class="hex">#FF5A1F</div>
+      <div class="role">A ponte com a Spark. Energia, destaque, ação. Usar com economia.</div>
+    </div>
+    <div class="swatch" style="background:#5AA2FF;color:#0B1020">
+      <div class="nm">Sinal</div><div class="hex">#5AA2FF</div>
+      <div class="role">Dado, inteligência, decisão. Gráficos e estados ativos.</div>
+    </div>
+    <div class="swatch" style="background:#8A8F9C;color:#0B1020">
+      <div class="nm">Massa</div><div class="hex">#8A8F9C</div>
+      <div class="role">Neutro estrutural. Texto secundário, linhas, UI.</div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:13px;margin-top:16px;font-family:'Space Mono'">Faísca é um slot: reconciliar com o HEX oficial de energia da Spark.</p>
+</section>
+
+<!-- TIPO -->
+<section id="tipo">
+  <div class="eyebrow">Tipografia</div>
+  <h2>Espaço, máquina e clareza.</h2>
+  <div class="typespec">
+    <div class="label">Display · Space Grotesk</div>
+    <div class="bigtype">Da faísca à gravidade</div>
+    <p class="muted" style="font-size:14px">Grotesca geométrica com caráter. O nome “Space” conversa com órbita e gravidade. Títulos, wordmark, números de impacto.</p>
+  </div>
+  <div class="typespec">
+    <div class="label">Texto · Inter</div>
+    <p style="font-size:18px;max-width:640px">Legibilidade de produto em qualquer tela, com acentuação impecável em português. A voz do dia a dia da plataforma — dashboards, relatórios, comunicação.</p>
+  </div>
+  <div class="typespec">
+    <div class="label">Técnica · Space Mono</div>
+    <p class="mono" style="font-size:15px">GRAVIA_MATCH · creator_score: 0.94 · pricing_index: R$ 12.400 · forecast: +18%</p>
+    <p class="muted" style="font-size:14px;margin-top:8px">A voz “de máquina” da camada de agentes e dados. Métricas, labels técnicas, nomes de módulos.</p>
+  </div>
+</section>
+
+<!-- ARQUITETURA -->
+<section id="arq" class="dark">
+  <div class="inner">
+    <div class="eyebrow">Arquitetura de Marca</div>
+    <h2>Uma marca-mãe, agentes com nome.</h2>
+    <p class="lead" style="color:#c7ccda;margin-bottom:30px">A Gravia escala como sistema: o núcleo e cada agente/visão herdam o nome — sem rebranding a cada feature.</p>
+    <div class="archgrid">
+      <div class="archcard"><div class="nm">Gravia <b>Core</b></div><p>Datalake e núcleo proprietário. A massa.</p></div>
+      <div class="archcard"><div class="nm">Gravia <b>Match</b></div><p>Agente de matching creator–marca.</p></div>
+      <div class="archcard"><div class="nm">Gravia <b>Pulse</b></div><p>Performance e comportamento em tempo real.</p></div>
+      <div class="archcard"><div class="nm">Gravia <b>Forecast</b></div><p>Previsão de resultado e pricing.</p></div>
+      <div class="archcard"><div class="nm">Gravia <b>Board</b></div><p>A visão de decisão e liderança.</p></div>
+      <div class="archcard"><div class="nm">Gravia <b>for Creators</b></div><p>O portal do creator: oportunidades, cachê, performance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APLICAÇÕES -->
+<section id="apps">
+  <div class="eyebrow">Aplicações</div>
+  <h2>A marca em uso.</h2>
+  <div class="appgrid">
+    <div class="app">
+      <div class="head">App icon · favicon</div>
+      <div class="body" style="display:flex;gap:20px;align-items:center">
+        <div class="icon-tile">
+          <svg width="56" height="56" viewBox="0 0 100 100">
+            <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#F5F2EB" stroke-width="8" stroke-linecap="round"/>
+            <line x1="66" y1="50" x2="84" y2="50" stroke="#F5F2EB" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="9" fill="#F5F2EB"/>
+            <circle cx="50" cy="16" r="6.5" fill="#FF5A1F"/>
+          </svg>
+        </div>
+        <p class="muted" style="font-size:13px">Monograma sobre Vórtex, canto arredondado. O ponto Faísca garante reconhecimento em escala mínima.</p>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="head">Splash · login da plataforma</div>
+      <div class="body">
+        <div class="splash">
+          <div class="lockup">
+            <svg width="40" height="40" viewBox="0 0 100 100">
+              <path d="M 81.9 61.6 A 34 34 0 1 1 81.9 38.4" fill="none" stroke="#F5F2EB" stroke-width="8" stroke-linecap="round"/>
+              <line x1="66" y1="50" x2="84" y2="50" stroke="#F5F2EB" stroke-width="8" stroke-linecap="round"/>
+              <circle cx="50" cy="50" r="9" fill="#F5F2EB"/>
+              <circle cx="50" cy="16" r="6.5" fill="#FF5A1F"/>
+            </svg>
+            <span class="wordmark" style="color:#F5F2EB;font-size:30px">GRAVIA</span>
+          </div>
+          <div class="btn">Entrar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="head">Dashboard do cliente</div>
+      <div class="body">
+        <div class="dash">
+          <div class="bar">
+            <span class="wordmark" style="color:#F5F2EB;font-size:18px">GRAVIA</span>
+            <div class="tabs"><span class="on">Visão</span><span>Creators</span><span>Resultado</span></div>
+          </div>
+          <div class="stage">
+            <div class="kpi"><div class="n">+18%</div><div class="l">Performance vs meta</div></div>
+            <div class="kpi"><div class="n" style="color:#FF5A1F">142</div><div class="l">Creators ativos</div></div>
+            <div class="kpi"><div class="n" style="color:#5AA2FF">0.94</div><div class="l">Match score médio</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="head">Slide de pitch / credenciais</div>
+      <div class="body">
+        <div class="pitch">
+          <h4>A decisão na era<br>dos creators tem<br>um centro de gravidade.</h4>
+          <span class="by">GRAVIA · uma plataforma Spark</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="head">Assinatura de e-mail · time Spark</div>
+      <div class="body">
+        <div class="sig">
+          <div class="nm">Raphael Pinho</div>
+          <div class="muted">Co-CEO &amp; CBO · Spark</div>
+          <div class="rule"></div>
+          <div class="mono" style="font-size:12px;color:#8A8F9C">GRAVIA · a plataforma de decisão da Spark</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="head">Lockup de módulo</div>
+      <div class="body" style="display:flex;flex-direction:column;gap:10px">
+        <span class="wordmark" style="font-size:24px">GRAVIA <span style="color:#FF5A1F">Match</span></span>
+        <span class="wordmark" style="font-size:24px">GRAVIA <span style="color:#5AA2FF">Forecast</span></span>
+        <p class="muted" style="font-size:12.5px">Núcleo em Vórtex; agente destacado em Faísca ou Sinal.</p>
+      </div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:13.5px;margin-top:22px">Demais aplicações (lista): apresentação institucional completa, onboarding de creator, relatório em PDF, papel timbrado Spark+Gravia, perfil social, template de proposta comercial.</p>
+</section>
+
+<!-- REGRAS -->
+<section id="regras">
+  <div class="eyebrow">Regras Críticas</div>
+  <h2>O que protege a marca.</h2>
+  <div class="rules">
+    <div class="rulebox do">
+      <h4>Valorizar</h4>
+      <ul>
+        <li>Grafia sempre “Gravia” — maiúscula inicial, sem acento. Nunca “Grávia”.</li>
+        <li>Faísca com economia: um ponto de energia, nunca campo inteiro.</li>
+        <li>Respiro generoso ao redor do logo (mínimo = altura do monograma).</li>
+        <li>Endosso “by Spark” em contextos institucionais e comerciais.</li>
+        <li>Space Mono só para dado/técnica; nunca para texto longo.</li>
+      </ul>
+    </div>
+    <div class="rulebox dont">
+      <h4>Evitar</h4>
+      <ul>
+        <li>“Gravia AI”, “Gravia Cloud”, “Gravia Intelligence” — sufixos genéricos que datam ou colidem.</li>
+        <li>Gradientes da moda ou brilhos — a gravidade é sóbria.</li>
+        <li>Distorcer, inclinar ou recolorir o monograma fora da paleta.</li>
+        <li>Faísca como cor de fundo dominante.</li>
+        <li>Usar Gravia sem nunca conectar à Spark na primeira menção institucional.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  GRAVIA · brand book v1 · <b>by Spark</b> — Da faísca à gravidade
+</footer>
+
+</body>
+</html>
